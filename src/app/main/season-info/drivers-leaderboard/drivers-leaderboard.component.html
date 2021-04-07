@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="background" [style.background-image]="'url(../../../../assets/images/background/bg.jpg)'">        </div>
+    <div class="row">
+
+        <div class="title">
+            <h2>Standings</h2>
+        </div>
+
+        <div class="top-3">
+            <ul>
+                <li>
+                    <a class="top2" href="#">
+                        <div class="image">
+                            <div class="number">
+
+                            </div>
+                            <div class="div-color">
+
+                            </div>
+                            <img [src]="bottas" />
+                        </div>
+                        <div class="name">
+                            <div class="first-name">
+                                <p>Valtteri <span><img /></span></p>
+                            </div>
+                            <div class="last-name">
+                                <h3>Bottas</h3>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="top1" href="#">
+
+                        <div class="image">
+                            <div class="number"></div>
+                            <div class="div-color"></div>
+                            <img [src]="lewis" />
+                        </div>
+
+                        <div class="name">
+                            <div class="first-name">
+                                <p>Lewis <span><img /></span></p>
+                            </div>
+                            <div class="last-name">
+                                <h3>Hamilton</h3>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="top3" href="#">
+                        <div class="image">
+                            <div class="number"></div>
+                            <div class="div-color"></div>
+                            <img [src]="max" />
+                        </div>
+
+                        <div class="name">
+                            <div class="first-name">
+                                <p>Max <span><img /></span></p>
+                            </div>
+                            <div class="last-name">
+                                <h3>verstappen</h3>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="leaderboard">
+            <ul>
+                <app-li-leaderboard></app-li-leaderboard>
+                <app-li-leaderboard></app-li-leaderboard>
+                <app-li-leaderboard></app-li-leaderboard>
+                <app-li-leaderboard></app-li-leaderboard>
+                <app-li-leaderboard></app-li-leaderboard>
+                <app-li-leaderboard></app-li-leaderboard>
+                <app-li-leaderboard></app-li-leaderboard>
+                <app-li-leaderboard></app-li-leaderboard>
+                <app-li-leaderboard></app-li-leaderboard>
+                <app-li-leaderboard></app-li-leaderboard>
+            </ul>
+        </div>
+
+        <div class="button">
+            <a href="#">
+                <div>
+                <button>
+                   view full standings <span>></span>
+                </button>
+            </div>
+            </a>
+        </div>
+
+    </div>
+</div>

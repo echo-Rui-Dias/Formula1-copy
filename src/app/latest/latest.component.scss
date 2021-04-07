@@ -1,0 +1,83 @@
+.container {
+  max-width: 1260px;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "info";
+  padding: 30px 40px;
+  font-family: "Titillium Web";
+  line-height: 17px;
+  font-size: 16px;
+
+  .title {
+    width: 100%;
+    grid-area: title;
+
+    h2 {
+      height: 34px;
+      border: 1px solid #67676d;
+      border-top: 0;
+      border-left: 0;
+      border-bottom-right-radius: 10px;
+      
+      a{
+        color: white;
+        text-decoration: none;
+
+        .underline:hover {
+          border-bottom: 3px solid red;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  
+.info{
+    grid-template-columns: 3fr 9fr;
+    display: grid;
+    grid-area: info;
+    grid-template-areas: "news topics topics";
+    .news {
+        padding-top: 30px;
+        grid-area: news;
+        color: white;
+        margin: 0px 10px;
+    
+        .news-select {
+          padding-top: 20px;
+          display: grid;
+        }
+      }
+    
+      .topics {
+        padding-top: 30px;
+        grid-area: topics;
+        color: white;
+        margin: 0px 10px;
+    
+        .topics-select {
+          padding-top: 20px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+    
+        app-topic {
+    
+          margin: 10px;
+        }
+      }
+  
+}
+  
+}
+
+@media screen and (max-width: 1360px) {
+  .container {
+    .info{
+        max-width: 986px;
+        margin: auto;
+    }
+  }
+}

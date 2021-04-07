@@ -1,0 +1,63 @@
+.container {
+  max-width: 1260px;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  padding: 30px 40px;
+  font-family: "Titillium Web";
+  line-height: 17px;
+  font-size: 16px;
+  grid-template-areas: "title""drivers";
+
+  .title {
+    width: 100%;
+    grid-area: title;
+    ul {
+        list-style: none;
+        display: flex;
+        border: 1px solid #67676d;
+        border-top: 0;
+        border-left: 0;
+        border-bottom-right-radius: 10px;
+      }
+
+    h2 {
+      height: 34px;
+      margin-right: 50px;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 1.6em;
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        .underline {
+          font-size: .8em;
+        }
+
+        .underline:hover {
+          border-bottom: 3px solid red;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .drivers {
+    grid-area: drivers;
+    padding-top: 20px;
+
+    ul {
+        padding: 0;
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: repeat(5,1fr);
+      list-style: none;
+      grid-gap: 0px 50px;
+
+      
+    }
+  }
+}

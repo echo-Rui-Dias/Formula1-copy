@@ -1,0 +1,29 @@
+section {
+  background-color: lightgreen;
+  width: 100%;
+  height: 109px;
+  border-radius: 10px;
+  border: 1px solid #38383f;
+  transition: .5s;
+
+  a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+  }
+
+  &:hover {
+    border: 1px solid #e10600;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+    section {
+        width: 220px;
+    }
+}
+

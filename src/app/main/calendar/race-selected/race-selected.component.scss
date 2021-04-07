@@ -1,0 +1,420 @@
+.container {
+  color: #949498;
+  text-align: start;
+  border-bottom: solid 1px #38383f;
+  border-right: solid 1px #38383f;
+  border-bottom-right-radius: 20px;
+  height: 100%;
+  width: 279px;
+
+}
+
+.blank1 {
+  display: none;
+  grid-area: blank1;
+}
+
+.blank2 {
+  display: none;
+  grid-area: blank2;
+}
+
+.padding-left {
+  padding-left: 10px;
+}
+
+h2 {
+  color: white;
+  font-size: 1.3em;
+  line-height: 23px;
+  margin: 0;
+
+}
+
+ul {
+  list-style: none;
+  color: #949498;
+  text-decoration: none;
+  padding: 0;
+}
+
+.row {
+  width: 100%;
+  display: grid;
+  grid-template-areas: "flag""h2""days"" rolex""buttons""schedule";
+
+}
+
+app-flag {
+  grid-area: flag;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  grid-area: h2;
+}
+
+.days {
+  grid-area: days;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+.rolex {
+  grid-area: rolex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-areas: "clock hours logo";
+  font-size: .8em;
+  text-transform: capitalize;
+  font-weight: bold;
+  background: #093a2b;
+  border-radius: 0 10px 10px 0;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  padding: 5px 0;
+  margin-right: 10px;
+
+  .clock {
+    grid-area: clock;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+
+    .clock-img {
+      width: 80%;
+      height: 80%;
+      background-size: 90%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .hours {
+    grid-area: hours;
+
+    .race-time {
+      color: white;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .your-time {
+      color: #949498;
+      margin: 0;
+      margin-top: 10px;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .rolex-logo {
+    border-left: 1px solid gray;
+    grid-area: logo;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+
+    .image {
+      width: 58px;
+      height: 48px;
+      background-size: 100%;
+      background-position: center;
+      background-position: 0 -16px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.buttons {
+  padding-top: 10px;
+  grid-area: buttons;
+  display: grid;
+  grid-template-areas:
+    "btnsync "
+    "btnconvert ";
+  place-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+
+  button {
+    font-family: "Titillium Web";
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: .5px;
+    text-align: center;
+    box-shadow: 0 0 0 1px #d0d0d2 inset;
+    background: 0 0;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: none;
+    padding: 5px 0 10px;
+    width: 100%;
+  }
+
+  .btn-sync-a {
+    grid-area: btnsync;
+
+    .btn-sinc {
+      width: 240px;
+      margin-right: 10px;
+    }
+  }
+
+  .btn-convert-a {
+    grid-area: btnconvert;
+
+    .btn-convert {
+      width: 240px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.schedule {
+  margin-top: 10px;
+  grid-area: schedule;
+  display: grid;
+  grid-template-areas: "practice""times";
+  margin-bottom: 22px;
+  font-weight: bold;
+
+  .practice-times {
+    grid-area: practice;
+    display: grid;
+
+    .lis {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 2fr 1fr 2fr;
+      margin-top: 5px;
+    }
+  }
+
+  .race-times {
+    grid-area: times;
+    display: grid;
+
+    .lis {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 2fr 1fr 2fr;
+      margin-top: 5px;
+    }
+  }
+
+  .type {
+    color: white;
+
+    padding: 4px 0;
+  }
+
+  .day {
+
+    font-size: 0.8em;
+    padding: 4px 0;
+    padding-left: 10px;
+  }
+
+  .day-hours {
+    color: white;
+    font-size: 0.7em;
+    background-color: #38383f;
+    border-radius: 10px;
+    padding: 4px 10px;
+    margin-right: 20px;
+
+
+  }
+}
+
+
+
+
+
+@media screen and (min-width: 760px) {
+  .container {
+    width: 515px;
+  }
+
+  app-flag {
+    margin-top: 20px;
+  }
+
+  .row {
+    place-items: center;
+  }
+
+  a {
+    text-align: center;
+    font-size: 1.4em;
+
+    h2 {
+      line-height: 35px;
+    }
+  }
+
+  .rolex {
+    width: 100%;
+    height: 104px;
+    border-radius: 0;
+    margin: 0;
+    grid-template-areas: "logo clock hours";
+    margin-right: 10px;
+
+
+    .clock {
+
+      .clock-img {
+        background-size: 50%;
+      }
+    }
+
+    .rolex-logo {
+      border: none;
+    }
+  }
+
+  .buttons {
+    grid-template-areas:
+      "btnsync btnconvert";
+  }
+
+
+  .schedule {
+    .blank1 {
+      display: block;
+    }
+
+    .blank2 {
+      display: block;
+    }
+
+    .practice-times {
+      .lis {
+        text-align: center;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: "blank1 type day day-hours blank2";
+
+        .day {
+          grid-area: day;
+          font-size: .9em;
+
+        }
+
+        .day-hours {
+          grid-area: day-hours;
+          margin-right: 0;
+          font-size: .9em;
+          padding-right: 5px;
+          padding-left: 5px;
+        }
+
+        .type {
+          grid-area: type;
+          text-align: start;
+        }
+      }
+    }
+
+    .race-times {
+      .lis {
+        text-align: center;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: "blank1 type day day-hours blank2";
+
+        .day {
+          grid-area: day;
+          font-size: .9em;
+        }
+
+        .day-hours {
+          grid-area: day-hours;
+          margin-right: 0;
+          font-size: .9em;
+          padding-right: 5px;
+          padding-left: 5px;
+          text-align: start;
+        }
+
+        .type {
+          grid-area: type;
+          text-align: start;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1030px) {
+  
+
+  
+
+  .container {
+    width: 695px;
+    height: 500px;
+  }
+.rolex{
+  margin-right: 0;
+  .clock{
+    .clock-img{
+      background-size: 35%;
+    }
+  }
+}
+  .schedule {
+    grid-template-areas: "practice times";
+    .practice-times {
+      margin-right: 30px;
+      grid-gap: 10px 0;
+      margin-top: 10px;
+      .lis {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px 0;
+        grid-template-areas: "type day day-hours";
+        grid-template-rows:1fr;
+
+        .blank1 {
+          display: none;
+        }
+        .blank2 {
+          display: none;
+        }
+      }
+    }
+  
+    .race-times {
+      grid-template-rows: repeat(3, 1fr);
+      margin-left: 30px;
+      grid-gap: 10px 0;
+      margin-top: 10px;
+      .lis {
+        grid-template-rows:1fr;
+        grid-gap: 5px 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "type day day-hours";
+        .blank1 {
+          display: none;
+        }
+        .blank2 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  
+}
+
+@media screen and (min-width: 1360px) {}

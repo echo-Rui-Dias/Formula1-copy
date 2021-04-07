@@ -1,0 +1,44 @@
+article{
+    padding: 10px 0px;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 1fr 1fr;
+    grid-template-areas: 
+    "img blank topic topic"
+    "img blank title title";
+    border-bottom: 1px solid gray;
+    font-family: "Titillium Web";
+    font-size: 16px;
+    letter-spacing: .2px;
+    line-height: 18px;
+    transition: 0.5s;
+    cursor: pointer;
+
+    img{
+        grid-area: img;
+        width: 100%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    h3{
+        grid-area: topic;
+        margin: 0;
+        font-family: "Titillium Web";
+        font-size: 11px;
+        line-height: 14px;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    p{
+        margin: 0;
+        margin-top: 5px;
+        font-size: 1.1em;
+        grid-area: title;
+    }
+
+    &:hover{
+        border-bottom: 1px solid red;
+    }
+}

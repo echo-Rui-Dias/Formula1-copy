@@ -1,0 +1,118 @@
+.background-lines {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 120px);
+  z-index: -10;
+  top: 120px;
+
+}
+
+a {
+  width: 100%;
+  text-decoration: none;
+  color: #15151e;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.container {
+  margin: auto;
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+  line-height: 1;
+  font-size: 1em;
+  font-family: "Titillium Web";
+  display: grid;
+  grid-template-areas: "title""news";
+  grid-auto-flow: row;
+}
+
+.row {
+
+  max-width: 576px;
+  z-index: 1;
+  margin: auto;
+  padding:0 10px;
+
+}
+
+.title {
+  border-bottom: 10px solid #15151e;
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    padding: 0;
+  }
+  
+
+app-new{
+    background-color: white;
+    &:hover{
+      color: white;
+      background: #15151e;
+      border-bottom-right-radius: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+//   .container {
+
+//   }
+  .row{
+    max-width: 768px;
+  }
+
+  ul {
+
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 10px 20px;
+  }
+
+
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    
+  }
+
+  .row {
+    max-width: 986px;
+    margin: auto;
+    
+  }
+
+  .important {
+    margin-right: 0;
+  }
+
+  .less-important {
+    margin-right: 0;
+  }
+
+  ul {
+    margin-right: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media screen and (min-width: 1360px) {
+
+  .row {
+    max-width: 1360px;
+    padding: 0 10px;
+  }
+  ul{
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr;
+  }
+}

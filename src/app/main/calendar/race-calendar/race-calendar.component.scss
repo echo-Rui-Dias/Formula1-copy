@@ -1,0 +1,30 @@
+li {
+  border-bottom: solid 1px #38383f;
+  border-right: solid 1px #38383f;
+  border-bottom-right-radius: 20px;
+  width: 120px;
+  height: 100%;
+}
+
+a {
+  height: 100%;
+  color: #949498;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (min-width: 760px) {
+  li{
+    width: 146px;
+  }
+}
+
+@media screen and (min-width: 1030px) {
+  li{
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 1360px) {}

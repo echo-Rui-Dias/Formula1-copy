@@ -1,0 +1,115 @@
+.container {
+  max-width: 1260px;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "info";
+  padding: 30px 40px;
+  font-family: "Titillium Web";
+  line-height: 17px;
+  font-size: 16px;
+
+  .title {
+    width: 100%;
+    grid-area: title;
+
+    h2 {
+      height: 34px;
+      border: 1px solid #67676d;
+      border-top: 0;
+      border-left: 0;
+      border-bottom-right-radius: 10px;
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        .underline {
+          font-size: .8em;
+        }
+        
+        .underline:hover {
+          border-bottom: 3px solid red;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .info {
+      width: 100%;
+    height: 280px;
+    display: grid;
+    grid-area: info;
+    grid-template-areas: "next-race upcoming-race";
+    grid-template-columns: 1fr 3.5fr;
+
+    .title-next {
+      text-align: center;
+      width: 70px;
+      height: 30px;
+      color: white;
+      background-color: #15151e;
+      position: absolute;
+      top: -.8em;
+      font-size: 1.15em;
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
+
+    .next {
+      margin-bottom: 25px;
+      grid-area: next-race;
+      display: grid;
+      grid-auto-flow: column;
+      position: relative;
+      border-right: 10px solid #38383f;
+      border-top: 10px solid #38383f;
+      border-top-right-radius: 30px;
+
+      div {
+        position: absolute;
+      }
+
+      app-race {
+        padding: 20px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+
+
+
+    .upcoming {
+      margin-left: 20px;
+      max-width: 980px;
+      display: grid;
+      grid-gap: 20px;
+      grid-auto-flow: column;
+      grid-area: upcoming-race;
+      position: relative;
+      padding-top: 30px;
+
+      .title-next {
+        top: -.1em;
+        text-align: start;
+        width: 95px;
+      }
+
+      div {
+        position: absolute;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1360px) {
+  .container {
+    .info {
+      max-width: 980px;
+    }
+  }
+}

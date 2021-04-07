@@ -1,0 +1,50 @@
+.container {
+  width: 15000px;
+  font-family: "Titillium Web";
+  font-size: 1em;
+  line-height: 15px;
+  min-height: 70px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #15151e;
+  height: 570px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  margin-top: 40px;
+  overflow-x: hidden;
+}
+.row{
+}
+ul {
+    display: grid;
+    grid-auto-flow: column;
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 760px) {
+  .container {
+    height: 670px;
+  }
+  ul{
+
+  }
+  app-race-selected{
+    margin: 35px 0;
+    margin-left: calc(100vw/6);
+    
+  }
+  app-race-calendar{
+    margin: 35px 0;
+  }
+}
+
+@media screen and (min-width: 1030px) {
+  .container {
+height: 600px;
+  }
+}
+
+@media screen and (min-width: 1360px) {}
